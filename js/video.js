@@ -75,20 +75,32 @@ mute.addEventListener("click", function() {
 
 	if(video.muted){
 		video.muted = false;
-		mute.innerHTML = "Mute";
-	}
+		mute.innerHTML = "Mute";}
 	else{
 		video.muted = true;
-		mute.innerHTML = "Unmute";
-	}
+		mute.innerHTML = "Unmute";}
 
 });
 
+//slider with volume update information//
 
+slider.addEventListener("input", function() {
 
+	video.volume = slider.value/100;
+	volume.innerHTML = slider.value + '%';
 
+});
+
+//video filters//
+
+vintage.addEventListener("click", function() {
+	video.classList.add('oldSchool');
+});
+
+orig.addEventListener("click", function() {
+	video.classList.remove('oldSchool');
+});
 
 // document.querySelector("#play").addEventListener("click", function() {
 // 	console.log("Play Video");
 // });
-

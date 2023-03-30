@@ -32,7 +32,7 @@ window.addEventListener("load", function() {
 
 });
 
-//play button functionality//
+//play and pause button functionality//
 
 play.addEventListener("click", function(){
 	
@@ -41,6 +41,16 @@ play.addEventListener("click", function(){
 	volume.innerHTML = video.volume * 100 + '%';
 
 });
+
+pause.addEventListener("click", function(){
+	video.pause();
+});
+
+//other button functionality: speed adjusting, skip and mute//
+
+
+
+
 
 // document.querySelector("#play").addEventListener("click", function() {
 // 	console.log("Play Video");

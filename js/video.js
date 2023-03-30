@@ -20,6 +20,7 @@ var vintage = document.querySelector("#vintage");
 //initialize declared vars//
 
 window.addEventListener("load", function() {
+	
 	console.log("Good job opening the window");
 	video = document.querySelector('#player1');
 	
@@ -31,7 +32,15 @@ window.addEventListener("load", function() {
 
 });
 
+//play button functionality//
 
+play.addEventListener("click", function(){
+	
+	video.play();
+	slider.value = video.volume * 100;
+	volume.innerHTML = video.volume * 100 + '%';
+
+});
 
 // document.querySelector("#play").addEventListener("click", function() {
 // 	console.log("Play Video");

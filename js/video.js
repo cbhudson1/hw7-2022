@@ -1,10 +1,12 @@
-//declaring variables before using them//
+//declaring variables before using them; spacing to read more clearly//
 
 var video;
+
 var play = document.querySelector("#play");
 var pause = document.querySelector("#pause");
+
 var faster = document.querySelector("#faster");
-var slower = document.querySelector("#")
+var slower = document.querySelector("#slower");
 
 window.addEventListener("load", function() {
 	console.log("Good job opening the window")

@@ -46,7 +46,43 @@ pause.addEventListener("click", function(){
 	video.pause();
 });
 
-//other button functionality: speed adjusting, skip and mute//
+//other button functionality: speed adjusting (10%), skip (restart if exceeds length) and mute//
+
+faster.addEventListener("click", function() {
+
+	video.playbackRate = video.playbackRate / 0.9;
+	console.log("Video speed is ", video.playbackRate);
+
+});
+
+slower.addEventListener("click", function() {
+
+	video.playbackRate = video.playbackRate * 0.9;
+	console.log("Video speed is ", video.playbackRate);
+
+});
+
+skip.addEventListener("click", function() {
+
+	video.currentTime = video.currentTime + 10;
+	if(video.currentTime >= video.duration){
+		video.currentTime = 0;}
+	console.log("The current video time is ", video.currentTime)
+
+})
+
+mute.addEventListener("click", function() {
+
+	if(video.muted){
+		video.muted = false;
+		mute.innerHTML = "Mute";
+	}
+	else{
+		video.muted = true;
+		mute.innerHTML = "Unmute";
+	}
+
+});
 
 
 
